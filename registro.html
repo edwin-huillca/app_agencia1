@@ -3,11 +3,12 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Juerga al límite - Backus Ice</title>
   <meta name="description" content="Juerga al limite">
   <meta name="author" content="Juerga al limite">
-  <meta name="viewport" content="width=device-width">
+
   
   <meta property="og:url" content="http://www.backusice.com.pe/juergaallimite/"/>
   <meta property="og:title" content="Backus Ice - Cancelador" />
@@ -218,56 +219,8 @@
                         </div>
                       </div>
                                           </div>
-                    <div class="fright clearfix relative col-fields" style="z-index:1">
-                      <label for="cbo_departamento" class="block tag">¿Dónde vives? *</label>
-                      <div class="birthday-custom clearfix">
-                        <div class="fleft relative bc-container">
-                          <span class="pseudo-input"></span>
-                          <ul class="list-reset no-margin list-date"  id="select-departamento">
-                                                            <li data-value="01">AMAZONAS</li>
-                                                              <li data-value="02">ANCASH</li>
-                                                              <li data-value="03">APURIMAC</li>
-                                                              <li data-value="04">AREQUIPA</li>
-                                                              <li data-value="05">AYACUCHO</li>
-                                                              <li data-value="06">CAJAMARCA</li>
-                                                              <li data-value="07">CALLAO</li>
-                                                              <li data-value="08">CUSCO</li>
-                                                              <li data-value="09">HUANCAVELICA</li>
-                                                              <li data-value="10">HUANUCO</li>
-                                                              <li data-value="11">ICA</li>
-                                                              <li data-value="12">JUNIN</li>
-                                                              <li data-value="13">LA LIBERTAD</li>
-                                                              <li data-value="14">LAMBAYEQUE</li>
-                                                              <li data-value="15">LIMA</li>
-                                                              <li data-value="16">LORETO</li>
-                                                              <li data-value="17">MADRE DE DIOS</li>
-                                                              <li data-value="18">MOQUEGUA</li>
-                                                              <li data-value="19">PASCO</li>
-                                                              <li data-value="20">PIURA</li>
-                                                              <li data-value="21">PUNO</li>
-                                                              <li data-value="22">SAN MARTIN</li>
-                                                              <li data-value="23">TACNA</li>
-                                                              <li data-value="24">TUMBES</li>
-                                                              <li data-value="25">UCAYALI</li>
-                                                        </ul>
-                          <input type="text" id="cbo_departamento" value="" name="cbo_departamento" class="required input-save">
-                        </div>
-                        <div class="fleft relative bc-container">
-                          <span class="pseudo-input"></span>
-                          <ul class="list-reset no-margin list-date" id="select-provincia">
-                            
-                          </ul>
-                          <input type="text" value="" id="cbo_provincia" name="cbo_provincia" class="required input-save">
-                        </div>
-                        <div class="fleft relative bc-container">
-                          <span class="pseudo-input"></span>
-                          <ul class="list-reset no-margin list-date" id="select-distrito">
-                          
-                          </ul>
-                          <input type="text" value="" id="cbo_distrito" name="cbo_distrito" class="required input-save">
-                        </div>
-                      </div>
-                    </div>
+
+                    
                                       </div>
                   <div class="clearfix row-form">
                     <div class="clearfix fleft">
@@ -363,17 +316,29 @@
     });
 
     $('#btn-continuar').on('click', function() {
+ 
+
       if(!$('#form-registro').valid()) {
         $('#error-registro').fadeIn(300).delay(3000).fadeOut(300);
       } else {
         $('#btn-continuar').hide();
-        
-        $('#text-gent').html('Guardando tus datos y generando la lista de amigos');
-        $('#btn-generator').trigger('click');
-        setTimeout(function() {
-          $('#form-registro').submit();
-        }, 3000);
+      
+          
+          var request = $('#form-registro').serialize();
+          $.ajax({
+             type: 'POST',
+             url: "http://www.backusice.com.pe/juergaallimite/home/guardar_usuario",
+             data: request,
+             success: function(data){
+                alert("Registro enviado!");
+                location.href="gracias.html";
+             }
+          });
+
+      
       }
+
+      return false;
     });
 
     $('#form-registro').validate();
