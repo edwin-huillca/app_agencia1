@@ -61,9 +61,9 @@
                 <form action="registro.html" method="post" class="form-age-gate" name="form-age-gate" id="form-age-gate">
                   <fieldset>
                     <div class="clearfix">
-                      <input tabindex="1" pattern="[0-9]*" data-min-limit="1" data-limit="31" type="text" id="txt_dia" name="txt_dia" class="required txt-birthday text numeric fleft" maxlength="2" placeholder="DD">
-                      <input tabindex="2" pattern="[0-9]*" data-min-limit="1" data-limit="12" type="text" id="txt_mes" name="txt_mes" class="required txt-birthday text numeric fleft" maxlength="2" placeholder="MM">
-                      <input tabindex="3" pattern="[0-9]*" data-limit="1997" type="text" id="txt_anio" name="txt_anio" class="required text numeric fleft" maxlength="4" placeholder="AAAA">
+                      <input tabindex="1" pattern="[0-9]*" data-min-limit="1" data-limit="31" type="number" id="txt_dia" name="txt_dia" class="required txt-birthday text numeric fleft" maxlength="2" placeholder="DD">
+                      <input tabindex="2" pattern="[0-9]*" data-min-limit="1" data-limit="12" type="number" id="txt_mes" name="txt_mes" class="required txt-birthday text numeric fleft" maxlength="2" placeholder="MM">
+                      <input tabindex="3" pattern="[0-9]*" data-limit="1997" type="number" id="txt_anio" name="txt_anio" class="required text numeric fleft" maxlength="4" placeholder="AAAA">
                     </div>
                     <input type="hidden" name="days_total" id="days_total" value="0" />
                     <button type="submit" class="btn-age-gate btn-home">ENTRAR</button>
