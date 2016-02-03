@@ -329,10 +329,14 @@
              type: 'POST',
              url: "http://www.backusice.com.pe/juergaallimite/home/guardar_usuario",
              data: request,
+             crossDomain : true,
              success: function(data){
                 alert("Registro enviado!");
                 location.href="gracias.html";
-             }
+             }, error: function(responseData, textStatus, errorThrown) { // 500 Status Header
+      
+                  alert("Error al enviar Formulario.");
+              }
           });
 
       
