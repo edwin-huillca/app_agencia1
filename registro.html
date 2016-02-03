@@ -325,7 +325,7 @@
       
           
           var request = $('#form-registro').serialize();
-          alert(request);
+          //alert(request);
          
 
           $.ajax({
@@ -334,7 +334,7 @@
              data: request,
              crossDomain : true,
              success: function(data){
-                alert("Registro enviado!");
+                //alert("Registro enviado!");
 
                 location.href="gracias.html";
              }, error: function(responseData, textStatus, errorThrown) { // 500 Status Header
