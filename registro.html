@@ -324,7 +324,10 @@
         //$('#btn-continuar').hide();
       
           
-          var request = JSON.stringify($('#form-registro').serialize());
+          var request = $('#form-registro').serialize();
+          alert(request);
+         
+
           $.ajax({
              type: 'POST',
              url: "http://www.backusice.com.pe/juergaallimite/home/guardar_usuario2",
