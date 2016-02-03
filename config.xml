@@ -16,5 +16,6 @@
 <gap:plugin name="org.apache.cordova.device" />
 <gap:plugin name="com.phonegap.plugin.statusbar" /> 
 
+<gap:plugin name="cordova-plugin-whitelist" source="npm" />
 <access origin="*" subdomains="false"  />
 </widget>

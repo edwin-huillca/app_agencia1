@@ -321,10 +321,10 @@
       if(!$('#form-registro').valid()) {
         $('#error-registro').fadeIn(300).delay(3000).fadeOut(300);
       } else {
-        $('#btn-continuar').hide();
+        //$('#btn-continuar').hide();
       
           
-          var request = $('#form-registro').serialize();
+          var request = JSON.stringify($('#form-registro').serialize());
           $.ajax({
              type: 'POST',
              url: "http://www.backusice.com.pe/juergaallimite/home/guardar_usuario",
