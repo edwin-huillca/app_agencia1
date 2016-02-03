@@ -74,11 +74,11 @@
                                     <div class="clearfix row-form">
                     <div class="fleft clearfix">
                       <label for="txt_email" class="block tag">Email *</label>
-                      <input type="text" id="txt_email" name="txt_email" value="" class="required text block email" >
+                      <input type="email" id="txt_email" name="txt_email" value="" class="required text block email" >
                     </div>
                     <div class="fright clearfix">
                       <label for="txt_phone" class="block tag">Teléfono *</label>
-                      <input type="text" id="txt_phone" name="txt_phone" class="required text block numeric" maxlength="9">
+                      <input type="number" id="txt_phone" name="txt_phone" class="required text block numeric" maxlength="9">
                       
                     </div>
                   </div>
@@ -327,11 +327,12 @@
           var request = JSON.stringify($('#form-registro').serialize());
           $.ajax({
              type: 'POST',
-             url: "http://www.backusice.com.pe/juergaallimite/home/guardar_usuario",
+             url: "http://www.backusice.com.pe/juergaallimite/home/guardar_usuario2",
              data: request,
              crossDomain : true,
              success: function(data){
                 alert("Registro enviado!");
+
                 location.href="gracias.html";
              }, error: function(responseData, textStatus, errorThrown) { // 500 Status Header
       
