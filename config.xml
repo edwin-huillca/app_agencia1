@@ -2,7 +2,7 @@
 <widget xmlns       = "http://www.w3.org/ns/widgets"
     xmlns:gap       = "http://phonegap.com/ns/1.0"
     xmlns:android   = "http://schemas.android.com/apk/res/android"
-    id              = "com.icecancelador.app.dev"
+    id              = "com.agencia.demo1.dev"
     version         = "1.0.0">
 <name>DEV ICE CANCELADOR</name>
 <description>Aplicación</description>
