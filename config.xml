@@ -2,10 +2,10 @@
 <widget xmlns       = "http://www.w3.org/ns/widgets"
     xmlns:gap       = "http://phonegap.com/ns/1.0"
     xmlns:android   = "http://schemas.android.com/apk/res/android"
-    id              = "com.icecancelador.app"
+    id              = "com.icecancelador.app.dev"
     version         = "1.0.0">
-<name>ICE CANCELADOR</name>
-<description>Aplicación para la marca BACKUS ICE</description>
+<name>DEV ICE CANCELADOR</name>
+<description>Aplicación</description>
 
 <feature name="http://api.phonegap.com/1.0/network"/>
 <feature name="http://api.phonegap.com/1.0/device"/>
